@@ -1,5 +1,6 @@
 package com.learnJava.data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Student {
@@ -7,7 +8,25 @@ public class Student {
     private int gradeLevel;
     private double gpa;
     private String gender;
-    List<String> activties;
+    List<String> activties = new ArrayList<>();
+    private int noteBooks;
+
+    public int getNoteBooks() {
+        return noteBooks;
+    }
+
+    public void setNoteBooks(int noteBooks) {
+        this.noteBooks = noteBooks;
+    }
+
+    public Student(String name, int gradeLevel, double gpa, String gender, List<String> activties, int noteBooks) {
+        this.name = name;
+        this.gradeLevel = gradeLevel;
+        this.gpa = gpa;
+        this.gender = gender;
+        this.activties = activties;
+        this.noteBooks = noteBooks;
+    }
 
     public Student(String name, int gradeLevel, double gpa, String gender, List<String> activties) {
         this.name = name;
