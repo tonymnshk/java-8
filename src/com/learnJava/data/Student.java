@@ -2,6 +2,7 @@ package com.learnJava.data;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Student {
     private String name;
@@ -10,6 +11,16 @@ public class Student {
     private String gender;
     List<String> activties = new ArrayList<>();
     private int noteBooks;
+
+    private Optional<Bike> bike = Optional.empty();
+
+    public Optional<Bike> getBike() {
+        return bike;
+    }
+
+    public void setBike(Optional<Bike> bike) {
+        this.bike = bike;
+    }
 
     public int getNoteBooks() {
         return noteBooks;
@@ -93,10 +104,12 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "name='" + name + '\'' +
-                ", gradeLevel='" + gradeLevel + '\'' +
-                ", gpa='" + gpa + '\'' +
+                ", gradeLevel=" + gradeLevel +
+                ", gpa=" + gpa +
                 ", gender='" + gender + '\'' +
                 ", activties=" + activties +
+                ", noteBooks=" + noteBooks +
+                ", bike=" + bike +
                 '}';
     }
 }
